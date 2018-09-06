@@ -4,6 +4,7 @@
   "description": "Fizz Buzz Roman Backend",
   "main": "index.js",
   "dependencies": {
+    "arabic-roman-convert.js": "^1.2.1",
     "npm": "^6.4.1",
     "shortid": "^2.2.13"
   },
