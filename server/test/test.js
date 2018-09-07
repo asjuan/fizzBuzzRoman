@@ -94,5 +94,32 @@ describe("a match", function () {
             challenge = match.challengePlayer(player2);
             assert.equal(challenge, "Player 1 lost!");
         });
+        it("player 1 sees next challenge", function () {
+            var player1, player2, challenge;
+            match.init();
+            player1 = match.joinMe();
+            player2 = match.joinMe();
+            match.closeregistration();
+            match.challengePlayer(player1);
+            match.respond(player1, "I");
+            match.challengePlayer(player2);
+            match.respond(player2, "II");
+            challenge = match.challengePlayer(player1);
+            assert.equal(challenge, "3");
+        });
+        it("player 1 responds 3 but must be fizz", function () {
+            var player1, player2, challenge;
+            match.init();
+            player1 = match.joinMe();
+            player2 = match.joinMe();
+            match.closeregistration();
+            match.challengePlayer(player1);
+            match.respond(player1, "I");
+            match.challengePlayer(player2);
+            match.respond(player2, "II");
+            match.respond(player1, "III");
+            challenge = match.challengePlayer(player2);
+            assert.equal(challenge, "Player 1 lost!");
+        });
     });
 });

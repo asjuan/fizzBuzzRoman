@@ -55,6 +55,5 @@ module.exports = {
         if (hasLost) return;
         counter += 1;
         validAnswer = fizzBuzEngine(counter);
-
     }
 };
