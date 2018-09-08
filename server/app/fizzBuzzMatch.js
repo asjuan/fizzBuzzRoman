@@ -30,7 +30,7 @@ module.exports = {
         if (!isValid) return undefined;
         if (hasLost) {
             return "Player " + lastPlayer + " lost!";
-        }
+        };
         return counter;
     },
     "respond": function (player, answer) {
