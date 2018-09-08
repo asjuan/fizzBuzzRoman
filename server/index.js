@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
 var match = require("../server/app/fizzBuzzMatch");
+app.get('/', function (req, res) {
+    res.send('Fizz Buzz Server is up..');
+});
 app.post('/init', function (req, res) {
     match.init();
     console.log("Reset match")
