@@ -1,0 +1,11 @@
+{
+  "name": "fbrclient",
+  "version": "1.0.0",
+  "description": "Fizz Buzz Roman front end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juan Alvarez",
+  "license": "ISC"
+}
