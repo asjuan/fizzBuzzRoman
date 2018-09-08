@@ -92,6 +92,8 @@ describe("a match", function () {
             match.challengePlayer(player1);
             match.respond(player1, "?");
             challenge = match.challengePlayer(player2);
+            assert.equal(match.readStatus().challenge, 1);
+            assert.equal(match.readStatus().answer, "?");
             assert.equal(challenge, "Player 1 lost!");
         });
         it("player 1 sees next challenge", function () {

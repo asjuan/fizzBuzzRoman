@@ -2,6 +2,11 @@ var express = require('express');
 const bodyParser = require("body-parser");
 var app = express();
 var match = require("../server/app/fizzBuzzMatch");
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -34,5 +39,9 @@ app.post("/answer", function (req, res) {
     match.respond(req.body.player, answer);
     console.log("Answer " + req.body.player.id + " he or she answers " + answer);
     res.send();
+});
+app.post("/audit", function (req, res) {
+    console.log(match.readStatus());
+    res.send(JSON.stringify(match.readStatus()));
 });
 app.listen(3000);

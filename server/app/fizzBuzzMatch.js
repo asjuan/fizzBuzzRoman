@@ -1,7 +1,7 @@
 "use strict";
 var response = require("../app/response");
 var fizzBuzEngine = require("../app/fizzBuzzEngine");
-var isClosed = false, arr = [], counter = 0, currentPlayer,lastPlayer, validAnswer, hasLost;
+var isClosed = false, arr = [], counter = 0, currentPlayer,lastPlayer, validAnswer, hasLost, currentAnswer;
 module.exports = {
     "init": function () {
         counter = 1;
@@ -51,9 +51,19 @@ module.exports = {
         }
         lastPlayer = arr[i].id;
         currentPlayer = next;
+        currentAnswer = answer;
         hasLost = answer !== validAnswer;
         if (hasLost) return;
         counter += 1;
         validAnswer = fizzBuzEngine(counter);
+    },
+    "readStatus": function () {
+        return {
+            "last": lastPlayer,
+            "current": currentPlayer,
+            "challenge": counter,
+            "answer": currentAnswer,
+            "isActive": !hasLost
+        };
     }
 };
