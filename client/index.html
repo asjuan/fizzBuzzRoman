@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Fizz Buzz mexico game</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
 </head>
 
 <body>
@@ -18,17 +20,46 @@
 		<li>if it is divisible by both you answer "fizzbuzz"</li>
 		<li>otherwise you repeat the number</li>
 	</ul>
-	<div>This game is similar, but you need to type the value</div>
-	<div>do you want to play?</div>
-	<input type="button" id="register" value="Yay" />
-	<div id="game">
-		<span>Welcome player : </span>
-		<span id="myuserId"></span>
-		<input type="button" value="play!" id="play">
-		<div id="mychallenge"></div>
-		<input type="text" id="myanswer" />
-		<input type="button" id="myresponse" value="Respond!"/>
-		<span id="mytoken"></span>
+	<div>This game is similar, but there is a twist</div>
+	<div>
+
+	</div>
+	<div id="game" class="container">
+		<div class="row">
+			<div class="col-sm">do you want to play?</div>
+			<div class="col-sm">
+				<input type="button" id="register" value="Yay" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm">
+				<span>Welcome player : </span>
+			</div>
+			<div class="col-sm">
+				<span id="myuserId"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm">Ready?</div>
+			<div class="col-sm">
+				<input type="button" value="play!" id="play">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm">Challenge is..</div>
+			<div class="col-sm">
+				<span id="mychallenge"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm">
+				<input type="text" id="myanswer" style="size:30px" />
+			</div>
+			<div class="col-sm">
+				<input type="button" id="myresponse" value="Respond!" />
+			</div>
+		</div>
+		<span style="display:none" id="mytoken"></span>
 	</div>
 	<script src="dist/app.js"></script>
 </body>
