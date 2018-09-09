@@ -30,13 +30,18 @@ app.post('/add', function (req, res) {
     res.send(playerInfo);
 });
 app.post("/challenge", function (req, res) {
-    var challenge = match.challengePlayer(req.body);
-    console.log("Player " + req.body.id + " challenge is " + challenge);
+    var challenge = "try again";
+    if (req.body.id) {
+        challenge = match.challengePlayer(req.body);
+    }
+    console.log("Player " + req.body.id + " challenge is.." + challenge);
     res.send(JSON.stringify({ "challenge": challenge }));
 });
 app.post("/answer", function (req, res) {
     var answer = req.body.answer;
-    match.respond(req.body.player, answer);
+    if (answer) {
+        match.respond(req.body.player, answer);
+    }
     console.log("Answer " + req.body.player.id + " he or she answers " + answer);
     res.send();
 });

@@ -1,7 +1,7 @@
 "use strict";
 var response = require("../app/response");
 var fizzBuzEngine = require("../app/fizzBuzzEngine");
-var isClosed = false, arr = [], counter = 0, currentPlayer,lastPlayer, validAnswer, hasLost, currentAnswer;
+var isClosed = false, arr = [], counter = 1, currentPlayer = 1, lastPlayer, validAnswer = "I", hasLost, currentAnswer;
 module.exports = {
     "init": function () {
         counter = 1;

@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Fizz Buzz mexico game</title>
 </head>
+
 <body>
-	<input type="button" id="register" value="I want to play" />
-	<div id="challenge"></div>
-	<input type="text" id="myanswer" />
-	<input type="button" id="respond" />
+	<h1>Fizz Buzz game</h1>
+	<div>According to wikipedia this game is used to understand the concept of divisibility.</div>
+	<div>So, someone says a number and you respond according to following rules:</div>
+	<ul>
+		<li>If it is divisible by 3 you say "fizz"</li>
+		<li>if it is divisible by 4 you say "buzz"</li>
+		<li>if it is divisible by both you answer "fizzbuzz"</li>
+		<li>otherwise you repeat the number</li>
+	</ul>
+	<div>This game is similar, but you need to type the value</div>
+	<div>do you want to play?</div>
+	<input type="button" id="register" value="Yay" />
+	<div id="game">
+		<span>Welcome player : </span>
+		<span id="myuserId"></span>
+		<input type="button" value="play!" id="play">
+		<div id="mychallenge"></div>
+		<input type="text" id="myanswer" />
+		<input type="button" id="myresponse" value="Respond!"/>
+		<span id="mytoken"></span>
+	</div>
 	<script src="dist/app.js"></script>
 </body>
+
 </html>
