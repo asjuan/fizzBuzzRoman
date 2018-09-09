@@ -4,5 +4,14 @@
   "description": "Fizz Buzz Roman game",
   "author": "Juan Alvarez",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asjuan/fizzBuzzRoman.git"
+  },
+  "bugs": {
+    "url": "https://github.com/asjuan/fizzBuzzRoman/issues"
+  },
+  "homepage": "https://github.com/asjuan/fizzBuzzRoman#readme"
 }
