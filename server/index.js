@@ -2,6 +2,7 @@ var express = require('express');
 const bodyParser = require("body-parser");
 var app = express();
 var match = require("../server/app/fizzBuzzMatch");
+var port = process.env.PORT || 1337;
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -49,4 +50,4 @@ app.post("/audit", function (req, res) {
     console.log(match.readStatus());
     res.send(JSON.stringify(match.readStatus()));
 });
-app.listen(8080);
+app.listen(port);
